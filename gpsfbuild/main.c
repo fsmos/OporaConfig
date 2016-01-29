@@ -1,0 +1,201 @@
+/* 
+ * File:   main.c
+ * Author: GusenkovS
+ *
+ * Created on 8 декабря 2015 г., 15:55
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include "struct_code.h"
+/*
+ * 
+ */
+void GenerateCFile(struct OporaDataStruct ors, char* file)
+{
+        char filec[200];
+        int i, j;
+        char* ports="ABCDEF";
+        strcpy(filec,file);
+        strcat(filec,".h");
+        strcat(file,".c"); 
+        FILE* fl = fopen(file,"w"); 
+        fprintf(fl,"#include \"");
+         strcpy(filec,strstr(filec,"\\"));
+          while(strchr(filec,'\\'))
+         {
+             strcpy(filec,filec+1);
+         }
+        fprintf(fl,filec);
+        fprintf(fl,"\"");
+        fprintf(fl,"//Init Function \n");
+        fprintf(fl,"void InitFunction() {");
+        fprintf(fl, "\n");
+        
+        for (i=0; i<6; ++i)
+        {
+            unsigned int REG_RXTX=0;
+            unsigned int REG_OE=0;
+            unsigned int REG_FUNC=0;
+            unsigned int REG_ANALOG=0;
+            unsigned int REG_PULL=0;  
+            unsigned int REG_PD=0;
+            unsigned int REG_PWR=0;
+        fprintf(fl, "/*!\n \\breif PORT%c\n", ports[i]);  
+            for (j=0; j<16; ++j)
+            {
+                fprintf(fl,"Пин %d\n", j);
+             if (ors.GPIOPort[i].Pin[j].RXTX==On) 
+             {
+              REG_RXTX |= 1<<j; 
+              fprintf(fl, "Состояние: включено\n");
+             } 
+             else
+             {
+                 fprintf(fl, "Состояние: выключено\n");
+             }
+             if (ors.GPIOPort[i].Pin[j].OE==Output)
+             {
+                REG_OE |= 1<<j; 
+                fprintf(fl, "Направление: выход\n");
+             }
+             else 
+             {
+                fprintf(fl, "Направление: вход\n"); 
+             }
+          switch (ors.GPIOPort[i].Pin[j].Function)
+        {
+            case port1:
+            fprintf(fl, "Режим работы вывода порта: порт\n");
+            break;
+            case mainfuction:
+            fprintf(fl, "Режим работы вывода порта: основная функция\n"); 
+            REG_FUNC |= 1<<(2*j);
+            break;
+            case alternain_function:
+            fprintf(fl, "Режим работы вывода порта: альтернативная функция\n");
+            REG_FUNC |= 2<<(2*j);
+            break;
+            case refrange_function:
+            fprintf(fl, "Режим работы вывода порта: переопределенная функция\n");
+            REG_FUNC |= 3<<(2*j);
+            break;   
+        }     
+          if (ors.GPIOPort[i].Pin[j].Analog==digital)
+          {
+              fprintf(fl, "Вывод порта: цифровой\n");
+              REG_ANALOG |= 1<<j;
+          }
+          else 
+          {
+              fprintf(fl, "Вывод порта: аналоговый\n");
+          }
+          if (ors.GPIOPort[i].Pin[j].PULL.port_down==On)
+          {
+              fprintf(fl, "Подтяжка к нулю включена\n");
+              REG_PULL |= 1<<j;
+          }
+          if (ors.GPIOPort[i].Pin[j].PULL.port_up==On)
+          {
+              fprintf(fl, "Подтяжка к питанию включена\n");
+              REG_PULL |= (1<<(j+16));
+          }
+          if (ors.GPIOPort[i].Pin[j].PD.control==Opendrain)
+          {
+              fprintf(fl, "Режим работы вывода: открытый сток\n");
+              REG_PD |= 1<<j;
+          }
+          else
+          {
+              fprintf(fl, "Режим работы вывода: управляемый драйвер\n");  
+          }
+          if (ors.GPIOPort[i].Pin[j].PD.Shmidt_port==On)
+          {
+              fprintf(fl, "Триггер Шмитта: включен\n");
+              REG_PD |= 1<<(j+16);
+          }
+          else 
+          {
+            fprintf(fl, "Триггер Шмитта: выключен\n");  
+          }
+          switch (ors.GPIOPort[i].Pin[j].PWR)
+          {
+              case reserved1: 
+                  fprintf(fl, "Режим работы порта: зарезервировано\n");
+                  break;
+              case slow_front: 
+                  fprintf(fl, "Режим работы порта: медленный фронт\n");
+                  REG_PWR |= 1<<(2*j);
+                  break;
+              case fast_front: 
+                  fprintf(fl, "Режим работы порта: быстрый фронт\n");
+                  REG_PWR |= 2<<(2*j);
+                  break;
+              case max_fast_front:
+                  fprintf(fl, "Режим работы порта: максимально быстрый фронт\n");
+                  REG_PWR |= 3<<(3*j);
+                  break;
+          }
+          }
+         fprintf(fl, "*/\n"); 
+         fprintf(fl,"PORT%c->RXTX=0x%08x;\n", ports[i], REG_RXTX);
+         fprintf(fl,"PORT%c->OE=0x%08x;\n", ports[i], REG_OE);
+         fprintf(fl, "PORT%c->FUNC=0x%08x;\n", ports[i], REG_FUNC);
+         fprintf(fl, "PORT%c->ANAlOG=0x%08x;\n", ports[i], REG_ANALOG);
+         fprintf(fl, "PORT%c->PULL=0x%08x;\n", ports[i], REG_PULL);
+         fprintf(fl, "PORT%c->PD=0x%08x;\n", ports[i], REG_PD);
+         fprintf(fl, "PORT%c->PWR=0x%08x;\n", ports[i], REG_PWR);
+         fprintf(fl,"\n");
+         
+        }
+        //fprintf(fl,"Example=%d;",ors.Er1.el1.ExampleParamet);
+        fprintf(fl,"}");
+        fclose(fl);
+        
+}
+void GenerateHeaderFile(struct OporaDataStruct ors, char* file)
+{
+        
+        strcat(file,".h"); 
+        FILE* fl = fopen(file,"w");
+        
+        fprintf(fl,"//Init Function \n");
+        fprintf(fl,"void InitFunction();");
+        fclose(fl);
+}
+void DelRash(char *out, char* in)
+{
+    int i;
+    for(i=0; i<strlen(in);i++)
+    { 
+        if(in[i]=='.') 
+        {
+         out[i]=0;
+            break;
+        }
+        out[i]=in[i];
+       
+    }
+}
+int main(int argc, char** argv) {
+
+    if(argc==2)
+    {
+        char filen[200];
+        FILE* fl = fopen(argv[1],"r");
+        struct OporaDataStruct ors;
+        fread(&ors,sizeof(ors),1,fl);
+        //printf("%d",ors.Er1.el1.ExampleParamet);
+        DelRash(filen,argv[1]);
+        GenerateCFile(ors,filen);
+        DelRash(filen,argv[1]);
+        GenerateHeaderFile(ors,filen);
+        fclose(fl);
+    }
+    // printf(argv[0]);
+    //printf("%d",argc);
+    return 0;
+    
+}
+
