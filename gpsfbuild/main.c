@@ -9,18 +9,26 @@
 #include <stdlib.h>
 #include <string.h>
 #include "struct_code.h"
+#include <time.h>
+#define GPS_version "V0.2 Beta"
 /*
  * 
  */
 void GenerateCFile(struct OporaDataStruct ors, char* file)
 {
+    char date[100];
         char filec[200];
         int i, j;
         char* ports="ABCDEF";
         strcpy(filec,file);
         strcat(filec,".h");
         strcat(file,".c"); 
-        FILE* fl = fopen(file,"w"); 
+        FILE* fl = fopen(file,"w");
+        struct tm* tkm;
+        const time_t timer=time(NULL);
+        tkm=localtime(&timer);
+        strftime(date, 100,"%d.%m.%Y %H:%M:%S", tkm);
+        fprintf(fl, "/*!\n\\file\n\\brief Заголовочный файл инициализации перефирии\n\\author Gusenkov S.V.\n\\Version %s \n\\date %s\n*/\n", GPS_version,date);
         fprintf(fl,"#include \"");
          strcpy(filec,strstr(filec,"\\"));
           while(strchr(filec,'\\'))
@@ -42,10 +50,11 @@ void GenerateCFile(struct OporaDataStruct ors, char* file)
             unsigned int REG_PULL=0;  
             unsigned int REG_PD=0;
             unsigned int REG_PWR=0;
+            unsigned int REG_GFEN=0;
         fprintf(fl, "/*!\n \\breif PORT%c\n", ports[i]);  
             for (j=0; j<16; ++j)
             {
-                fprintf(fl,"Пин %d\n", j);
+                fprintf(fl,"Пин %d <br>\n", j);
              if (ors.GPIOPort[i].Pin[j].RXTX==On) 
              {
               REG_RXTX |= 1<<j; 
@@ -137,6 +146,15 @@ void GenerateCFile(struct OporaDataStruct ors, char* file)
                   REG_PWR |= 3<<(3*j);
                   break;
           }
+          if (ors.GPIOPort[i].Pin[j].GFEN==On)
+          {
+              fprintf(fl, "Входной фильтр : включен\n");
+              REG_GFEN |= 1<<j;
+          }
+          else 
+          {
+              fprintf(fl, "Входной фильтр : выключен\n");
+          }
           }
          fprintf(fl, "*/\n"); 
          fprintf(fl,"PORT%c->RXTX=0x%08x;\n", ports[i], REG_RXTX);
@@ -146,6 +164,7 @@ void GenerateCFile(struct OporaDataStruct ors, char* file)
          fprintf(fl, "PORT%c->PULL=0x%08x;\n", ports[i], REG_PULL);
          fprintf(fl, "PORT%c->PD=0x%08x;\n", ports[i], REG_PD);
          fprintf(fl, "PORT%c->PWR=0x%08x;\n", ports[i], REG_PWR);
+         fprintf(fl, "PORT%c->GFEN=0x%08x;\n", ports[i], REG_GFEN);
          fprintf(fl,"\n");
          
         }
@@ -156,10 +175,30 @@ void GenerateCFile(struct OporaDataStruct ors, char* file)
 }
 void GenerateHeaderFile(struct OporaDataStruct ors, char* file)
 {
-        
-        strcat(file,".h"); 
-        FILE* fl = fopen(file,"w");
-        
+    int i, j;
+    unsigned int REG_SETTX=0;
+    unsigned int REG_CLRTX=0;
+    char* ports="ABCDEF";    
+
+    strcat(file,".h"); 
+    FILE* fl = fopen(file,"w");
+    for (i=0; i<6; ++i)
+    {
+        for (j=0; j<16; ++j)
+        {
+            if (ors.GPIOPort[i].Pin[j].PCMD.CMD_ENABLE==On)
+            {
+                REG_SETTX=1<<j;
+                fprintf(fl, "#define PORT%c%d_ENABLE PORT%c->SETTX=0x%08x; /*!< Включить порт %c%d*/\n", ports[i], j, ports[i], REG_SETTX, ports[i], j);
+            }
+            if (ors.GPIOPort[i].Pin[j].PCMD.CMD_ENABLE==On)
+            {
+                REG_CLRTX=1<<j;
+                fprintf(fl, "#define PORT%c%d_DISABLE PORT%c->CLRTX=0x%08x; /*!< Выключить порт %c%d*/\n", ports[i], j, ports[i], REG_CLRTX, ports[i], j);               
+            }
+        }
+        fprintf(fl, "\n"); 
+    }
         fprintf(fl,"//Init Function \n");
         fprintf(fl,"void InitFunction();");
         fclose(fl);
