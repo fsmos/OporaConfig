@@ -16,7 +16,8 @@ SOURCES += main.cpp\
         mainwindow.cpp
 
 HEADERS  += mainwindow.h \
-    struct_code.h
+    struct_code.h \
+    struct_clk.h
 
 FORMS    += mainwindow.ui
 
