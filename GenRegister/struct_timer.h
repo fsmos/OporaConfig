@@ -2,12 +2,6 @@
 #define STRUCT_TIMER_H
 
 
-enum Switches
-{
-    On,
-    Off
-};
-
 struct TIMER_CNT
        {
     int CNT;
@@ -119,39 +113,39 @@ enum WORK_ETR
 
 enum Signal_CHFLTR
 {
-    TIM_CLK1 = 0000,
-    TIM_CLK2 = 0001,
-    TIM_CLK3 = 0010,
-    TIM_CLK4 = 0011,
-    FDTS2_6 = 0100,
-    FDTS2_8  = 0101,
-    FDTS4_6 = 0110,
-    FDTS4_8 = 0111,
-    FDTS8_6 = 1000,
-    FDTS8_8 = 1001,
-    FDTS16_6 = 1010,
-    FDTS16_8 = 1011,
-    FDTS16_6 = 1100,
-    FDTS32_8 = 1101,
-    FDTS32_6 = 1110,
-    FDTS32_8 = 1111,
+    TIM_CLK1 = 0b0000,
+    TIM_CLK2 = 0b0001,
+    TIM_CLK3 = 0b0010,
+    TIM_CLK4 = 0b0011,
+    FDTS2_6 = 0b0100,
+    FDTS2_8  = 0b0101,
+    FDTS4_6 = 0b0110,
+    FDTS4_8 = 0b0111,
+    FDTS8_6 = 0b1000,
+    FDTS8_8 = 0b1001,
+    FDTS16_5 = 0b1010,
+    FDTS16_8 = 0b1011,
+    FDTS16_6 = 0b1100,
+    FDTS32_5 = 0b1101,
+    FDTS32_6 = 0b1110,
+    FDTS32_8 = 0b1111,
 
 };
 
 enum CHSEL_TIMER
 {
-    plus_front_CHxi=00,
-    minus_front_CHxi=01,
-    plus_front_12_23_34_41=10,
-    plus_front_13_24_31_42=11
+    plus_front_CHxi=0b00,
+    minus_front_CHxi=0b01,
+    plus_front_12_23_34_41=0b10,
+    plus_front_13_24_31_42=0b11
 };
 
 enum CHPSC_TIMER
 {
-    Not_Div=00,
-    Div2=01,
-    Div4=10,
-    Div8=11
+    Not_Div=0b00,
+    Div2=0b01,
+    Div4=0b10,
+    Div8=0b11
 };
 
 enum OCCM_TIMER
@@ -189,17 +183,17 @@ enum Invert
 
 enum Work_Invert_Chanel
 {
-    Chanel_Not_Working_0=00,
-    Chanel_Working_1=01,
-    signal_REF=10,
-    signal_DTG=11
+    Chanel_Not_Working_0=0b00,
+    Chanel_Working_1=0b01,
+    signal_REF=0b10,
+    signal_DTG=0b11
 };
 
 enum Mode_Exit_Straight
 {
-    Chanel_Not_Working_0=00,
-    Chanel_Working_Exit_1=01,
-    Signal_REF=10,
+    Chanel_Not_Working_1=0b00,
+    Chanel_Working_Exit_1=0b01,
+    Signal_REF=0b10
 };
 
 struct Chy_CNTRL1
@@ -240,7 +234,7 @@ enum Work_DTG
 
 struct CHy_DTG
 {
- Char DTGx;
+ unsigned charDTGx;
  enum Work_DTG EDTS;
  unsigned char DTG;
 };
