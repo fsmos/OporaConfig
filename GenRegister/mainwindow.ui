@@ -649,7 +649,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>12</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -1037,7 +1037,7 @@
          </rect>
         </property>
         <property name="title">
-         <string>HSE 2</string>
+         <string>HSE BYP</string>
         </property>
         <widget class="QRadioButton" name="radioButton_9">
          <property name="geometry">

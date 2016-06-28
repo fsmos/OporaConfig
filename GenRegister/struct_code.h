@@ -90,8 +90,8 @@ struct GPIOStruct
 struct GPIOPin Pin[16]; ///< вывод микроконтроллера
 };
 
-#include "struct_clk.h"
-
+#include "struct_clk.h" ///< Артур
+#include "struct_timer.h" ///< Миша
 /**
 *\brief Настройка опоры
 *Эта структура предназначена для настройки опоры микроконтроллера 1986VE1T
@@ -99,6 +99,8 @@ struct GPIOPin Pin[16]; ///< вывод микроконтроллера
 struct OporaDataStruct
 {
 struct GPIOStruct GPIOPort[6]; ///< настройка портов микроконтроллера
+struct CLK_GLOBAL OPORA_CLOCK;
+struct TIMER_Global PER_TIMER[4];
 };
 
 #endif // STRUCT_CODE_H

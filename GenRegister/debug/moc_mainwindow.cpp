@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[22];
-    char stringdata0[328];
+    QByteArrayData data[23];
+    char stringdata0[336];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -50,7 +50,8 @@ QT_MOC_LITERAL(17, 210, 31), // "on_listWidget_currentRowChanged"
 QT_MOC_LITERAL(18, 242, 10), // "currentRow"
 QT_MOC_LITERAL(19, 253, 33), // "on_listWidget_2_currentRowCha..."
 QT_MOC_LITERAL(20, 287, 20), // "on_GPIOPinON_clicked"
-QT_MOC_LITERAL(21, 308, 19) // "on_action_triggered"
+QT_MOC_LITERAL(21, 308, 19), // "on_action_triggered"
+QT_MOC_LITERAL(22, 328, 7) // "SaveCLK"
 
     },
     "MainWindow\0on_FileOpen_toggled\0\0arg1\0"
@@ -61,7 +62,8 @@ QT_MOC_LITERAL(21, 308, 19) // "on_action_triggered"
     "on_listWidget_itemSelectionChanged\0"
     "on_listWidget_currentRowChanged\0"
     "currentRow\0on_listWidget_2_currentRowChanged\0"
-    "on_GPIOPinON_clicked\0on_action_triggered"
+    "on_GPIOPinON_clicked\0on_action_triggered\0"
+    "SaveCLK"
 };
 #undef QT_MOC_LITERAL
 
@@ -71,7 +73,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      14,   14, // methods
+      15,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -79,20 +81,21 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,   84,    2, 0x08 /* Private */,
-       4,    1,   87,    2, 0x08 /* Private */,
-       7,    0,   90,    2, 0x08 /* Private */,
-       8,    2,   91,    2, 0x08 /* Private */,
-      11,    0,   96,    2, 0x08 /* Private */,
-      12,    0,   97,    2, 0x08 /* Private */,
-      13,    2,   98,    2, 0x08 /* Private */,
-      14,    2,  103,    2, 0x08 /* Private */,
-      15,    0,  108,    2, 0x08 /* Private */,
-      16,    0,  109,    2, 0x08 /* Private */,
-      17,    1,  110,    2, 0x08 /* Private */,
-      19,    1,  113,    2, 0x08 /* Private */,
-      20,    0,  116,    2, 0x08 /* Private */,
-      21,    0,  117,    2, 0x08 /* Private */,
+       1,    1,   89,    2, 0x08 /* Private */,
+       4,    1,   92,    2, 0x08 /* Private */,
+       7,    0,   95,    2, 0x08 /* Private */,
+       8,    2,   96,    2, 0x08 /* Private */,
+      11,    0,  101,    2, 0x08 /* Private */,
+      12,    0,  102,    2, 0x08 /* Private */,
+      13,    2,  103,    2, 0x08 /* Private */,
+      14,    2,  108,    2, 0x08 /* Private */,
+      15,    0,  113,    2, 0x08 /* Private */,
+      16,    0,  114,    2, 0x08 /* Private */,
+      17,    1,  115,    2, 0x08 /* Private */,
+      19,    1,  118,    2, 0x08 /* Private */,
+      20,    0,  121,    2, 0x08 /* Private */,
+      21,    0,  122,    2, 0x08 /* Private */,
+      22,    0,  123,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -107,6 +110,7 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void,
     QMetaType::Void, QMetaType::Int,   18,
     QMetaType::Void, QMetaType::Int,   18,
+    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -134,6 +138,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 11: _t->on_listWidget_2_currentRowChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 12: _t->on_GPIOPinON_clicked(); break;
         case 13: _t->on_action_triggered(); break;
+        case 14: _t->SaveCLK(); break;
         default: ;
         }
     }
@@ -164,13 +169,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 14)
+        if (_id < 15)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 14;
+        _id -= 15;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 14)
+        if (_id < 15)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 14;
+        _id -= 15;
     }
     return _id;
 }

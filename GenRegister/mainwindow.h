@@ -41,6 +41,8 @@ private slots:
 
     void on_action_triggered();
 
+    void SaveCLK();
+
 private:
     Ui::MainWindow *ui;
 };

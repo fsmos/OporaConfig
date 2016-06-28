@@ -13,11 +13,13 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp
+        mainwindow.cpp \
+    struct_clk.cpp
 
 HEADERS  += mainwindow.h \
     struct_code.h \
-    struct_clk.h
+    struct_clk.h \
+    struct_timer.h
 
 FORMS    += mainwindow.ui
 

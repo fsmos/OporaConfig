@@ -68,7 +68,8 @@ enum CPU_C1
 struct CPU_CLOCK
 {
     enum HCLK HCLK_SEL;
-    enum CPU_C3 CPU_C3_SEL;
+//    enum CPU_C3 CPU_C3_SEL;
+    unsigned char CPU_C3_SEL;
     enum CPU_C2 CPU_C2_SEL;
     enum CPU_C1 CPU_C1_SEL;
 };
@@ -79,13 +80,6 @@ enum USB_C2
     PLLUSBo = 0b0001
 };
 
-//    enum USB_C1
-//    {
-//        HSI = 0b0000,
-//        HSIDIV2 = 0b0001,
-//        HSE = 0b0010,
-//        HSEDIV2 = 0b0011
-//    };
 
 struct USB_CLOCK
 {
@@ -111,10 +105,10 @@ enum ADC_C1
     USB_C2 = 0b0011
 };
 
-struct STRUCT_ADC_MCO_CLOCK
+struct ADC_MCO_CLOCK
 {
     enum Switches ADC_CLK_EN;
-    enum CPU_C3 ADC_C3_SEll;
+    unsigned char ADC_C3_SEll;
     enum ADC_C2 ADC_C2_SELL;
     enum ADC_C1 ADC_C1_SELL;
 };
@@ -123,8 +117,8 @@ struct RTC_CLOCK
 {
     enum Switches HSI_RTC_EN;
     enum Switches HSE_RTC_EN;
-    enum CPU_C3 HSI_SEL;
-    enum CPU_C3 HSE_SEL;
+    unsigned char HSI_SEL;
+    unsigned char HSE_SEL;
 };
 
 struct PER_CLOCK
@@ -237,4 +231,24 @@ struct ETH_CLOCK
     enum CAN_CLK_DIV PHY_BRG;
     enum CAN_CLK_DIV MAN_BRG;
 };
+
+struct CLK_GLOBAL
+{
+    struct CLOCK_STATUS CLK_ST;
+    struct PLL_CONTROL PLL_CNTRL;
+    struct HS_CONTROL HS_CNTRL;
+    struct CPU_CLOCK CPU_CLK;
+    struct USB_CLOCK USB_CLK;
+    struct ADC_MCO_CLOCK ADC_MCO_CLK;
+    struct RTC_CLOCK RTC_CLK;
+    struct PER_CLOCK RER_CLK;
+    struct CAN_CLOCK CAN_CLK;
+    struct TIM_CLOCK TIM_CLK;
+    struct UART_CLOCK U_CLK;
+    struct SSP_CLOCK SSP_CLK;
+    struct ETH_CLOCK ETH_CLK;
+};
+
+
+
 #endif // STRUCT_CLK_H
