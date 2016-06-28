@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -649,7 +649,7 @@
        <bool>false</bool>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>12</number>
       </property>
       <widget class="QWidget" name="tab_3">
        <attribute name="title">
@@ -3297,49 +3297,6 @@
         <property name="title">
          <string>ГОСТР52070-2003</string>
         </property>
-        <widget class="QLabel" name="label_20">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>50</y>
-           <width>241</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Выбор истоничка частоты</string>
-         </property>
-        </widget>
-        <widget class="QComboBox" name="comboBox_36">
-         <property name="geometry">
-          <rect>
-           <x>10</x>
-           <y>70</y>
-           <width>71</width>
-           <height>22</height>
-          </rect>
-         </property>
-         <item>
-          <property name="text">
-           <string>HSI</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>HSE</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>PLLCPUo</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>HSE2</string>
-          </property>
-         </item>
-        </widget>
         <widget class="QCheckBox" name="checkBox_86">
          <property name="geometry">
           <rect>
@@ -3357,7 +3314,7 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>130</y>
+           <y>80</y>
            <width>71</width>
            <height>22</height>
           </rect>
@@ -3402,13 +3359,39 @@
          <property name="geometry">
           <rect>
            <x>10</x>
-           <y>100</y>
+           <y>50</y>
            <width>171</width>
            <height>16</height>
           </rect>
          </property>
          <property name="text">
           <string>Делитель тактовой частоты</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_35">
+        <property name="geometry">
+         <rect>
+          <x>590</x>
+          <y>10</y>
+          <width>241</width>
+          <height>161</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Ethernet MAC</string>
+        </property>
+        <widget class="QCheckBox" name="checkBox_87">
+         <property name="geometry">
+          <rect>
+           <x>10</x>
+           <y>20</y>
+           <width>191</width>
+           <height>18</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>разрешить тактовую частоту</string>
          </property>
         </widget>
        </widget>
@@ -3459,7 +3442,7 @@
        </rect>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_18">
        <attribute name="title">
@@ -4041,7 +4024,7 @@ cчетчик вниз при DIR=1
      <x>0</x>
      <y>0</y>
      <width>1010</width>
-     <height>21</height>
+     <height>25</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

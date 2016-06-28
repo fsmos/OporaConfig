@@ -173,8 +173,8 @@ struct CAN_CLOCK
 {
     enum Switches CAN2_CLK_EN;
     enum Switches CAN1_CLK_EN;
-    enum CAN_CLK_DIV CAN2_BRG;
-    enum CAN_CLK_DIV CAN1_BRG;
+    unsigned char CAN2_BRG;
+    unsigned char CAN1_BRG;
 };
 
 struct TIM_CLOCK
@@ -182,9 +182,9 @@ struct TIM_CLOCK
     enum Switches TIM3_CLK_EN;
     enum Switches TIM2_CLK_EN;
     enum Switches TIM1_CLK_EN;
-    enum CAN_CLK_DIV TIM3_BRG;
-    enum CAN_CLK_DIV TIM2_BRG;
-    enum CAN_CLK_DIV TIM1_BRG;
+    unsigned char TIM3_BRG;
+    unsigned char TIM2_BRG;
+    unsigned char TIM1_BRG;
 };
 
 struct UART_CLOCK
@@ -192,9 +192,9 @@ struct UART_CLOCK
     enum Switches TIM4_CLK_EN;
     enum Switches UART2_CLK_EN;
     enum Switches UART1_CLK_EN;
-    enum CAN_CLK_DIV TIM4_BRG;
-    enum CAN_CLK_DIV UART2_BRG;
-    enum CAN_CLK_DIV UART1_BRG;
+    unsigned char TIM4_BRG;
+    unsigned char UART2_BRG;
+    unsigned char UART1_BRG;
 };
 
 struct SSP_CLOCK
@@ -202,9 +202,9 @@ struct SSP_CLOCK
     enum Switches SSP3_CLK_EN;
     enum Switches SSP2_CLK_EN;
     enum Switches SSP1_CLK_EN;
-    enum CAN_CLK_DIV SSP3_BRG;
-    enum CAN_CLK_DIV SSP2_BRG;
-    enum CAN_CLK_DIV SSP1_BRG;
+    unsigned char SSP3_BRG;
+    unsigned char SSP2_BRG;
+    unsigned char SSP1_BRG;
 };
 
 enum PHY_CLK
@@ -228,8 +228,8 @@ struct ETH_CLOCK
     enum sleep_mode SLEEP;
     enum Switches MAN_CLK_EN;
     enum Switches ETH_CLK_EN;
-    enum CAN_CLK_DIV PHY_BRG;
-    enum CAN_CLK_DIV MAN_BRG;
+    unsigned char PHY_BRG;
+    unsigned char MAN_BRG;
 };
 
 struct CLK_GLOBAL
@@ -252,3 +252,4 @@ struct CLK_GLOBAL
 
 
 #endif // STRUCT_CLK_H
+

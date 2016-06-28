@@ -19,6 +19,7 @@
 #include <QtWidgets/QGroupBox>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
+#include <QtWidgets/QLineEdit>
 #include <QtWidgets/QListWidget>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenu>
@@ -222,11 +223,59 @@ public:
     QLabel *label_37;
     QCheckBox *checkBox_68;
     QGroupBox *groupBox_16;
-    QLabel *label_20;
-    QComboBox *comboBox_36;
     QCheckBox *checkBox_86;
     QComboBox *comboBox_37;
     QLabel *label_38;
+    QGroupBox *groupBox_35;
+    QCheckBox *checkBox_87;
+    QWidget *tab_16;
+    QComboBox *comboBox_16;
+    QTabWidget *tabWidget_3;
+    QWidget *tab_18;
+    QLineEdit *lineEdit;
+    QLineEdit *lineEdit_2;
+    QLineEdit *lineEdit_3;
+    QLineEdit *lineEdit_4;
+    QLabel *label_22;
+    QLabel *label_23;
+    QLabel *label_27;
+    QLabel *label_29;
+    QGroupBox *groupBox_28;
+    QRadioButton *radioButton_11;
+    QRadioButton *radioButton_12;
+    QRadioButton *radioButton_13;
+    QRadioButton *radioButton_14;
+    QRadioButton *radioButton_15;
+    QRadioButton *radioButton_16;
+    QRadioButton *radioButton_18;
+    QRadioButton *radioButton_19;
+    QRadioButton *radioButton_20;
+    QRadioButton *radioButton_21;
+    QRadioButton *radioButton_22;
+    QGroupBox *groupBox_29;
+    QRadioButton *radioButton_17;
+    QRadioButton *radioButton_23;
+    QRadioButton *radioButton_24;
+    QRadioButton *radioButton_25;
+    QGroupBox *groupBox_30;
+    QRadioButton *radioButton_26;
+    QRadioButton *radioButton_27;
+    QGroupBox *groupBox_31;
+    QRadioButton *radioButton_28;
+    QRadioButton *radioButton_29;
+    QGroupBox *groupBox_32;
+    QRadioButton *radioButton_30;
+    QRadioButton *radioButton_31;
+    QGroupBox *groupBox_33;
+    QRadioButton *radioButton_32;
+    QRadioButton *radioButton_33;
+    QGroupBox *groupBox_34;
+    QRadioButton *radioButton_34;
+    QRadioButton *radioButton_35;
+    QRadioButton *radioButton_36;
+    QWidget *tab_19;
+    QWidget *tab_17;
+    QComboBox *comboBox_17;
     QMenuBar *menuBar;
     QMenu *menu;
     QToolBar *mainToolBar;
@@ -846,23 +895,167 @@ public:
         groupBox_16 = new QGroupBox(tab_15);
         groupBox_16->setObjectName(QStringLiteral("groupBox_16"));
         groupBox_16->setGeometry(QRect(310, 10, 261, 161));
-        label_20 = new QLabel(groupBox_16);
-        label_20->setObjectName(QStringLiteral("label_20"));
-        label_20->setGeometry(QRect(10, 50, 241, 16));
-        comboBox_36 = new QComboBox(groupBox_16);
-        comboBox_36->setObjectName(QStringLiteral("comboBox_36"));
-        comboBox_36->setGeometry(QRect(10, 70, 71, 22));
         checkBox_86 = new QCheckBox(groupBox_16);
         checkBox_86->setObjectName(QStringLiteral("checkBox_86"));
         checkBox_86->setGeometry(QRect(10, 20, 191, 18));
         comboBox_37 = new QComboBox(groupBox_16);
         comboBox_37->setObjectName(QStringLiteral("comboBox_37"));
-        comboBox_37->setGeometry(QRect(10, 130, 71, 22));
+        comboBox_37->setGeometry(QRect(10, 80, 71, 22));
         label_38 = new QLabel(groupBox_16);
         label_38->setObjectName(QStringLiteral("label_38"));
-        label_38->setGeometry(QRect(10, 100, 171, 16));
+        label_38->setGeometry(QRect(10, 50, 171, 16));
+        groupBox_35 = new QGroupBox(tab_15);
+        groupBox_35->setObjectName(QStringLiteral("groupBox_35"));
+        groupBox_35->setGeometry(QRect(590, 10, 241, 161));
+        checkBox_87 = new QCheckBox(groupBox_35);
+        checkBox_87->setObjectName(QStringLiteral("checkBox_87"));
+        checkBox_87->setGeometry(QRect(10, 20, 191, 18));
         tabWidget_2->addTab(tab_15, QString());
         tabWidget->addTab(tab_2, QString());
+        tab_16 = new QWidget();
+        tab_16->setObjectName(QStringLiteral("tab_16"));
+        comboBox_16 = new QComboBox(tab_16);
+        comboBox_16->setObjectName(QStringLiteral("comboBox_16"));
+        comboBox_16->setGeometry(QRect(0, 0, 1001, 22));
+        tabWidget_3 = new QTabWidget(tab_16);
+        tabWidget_3->setObjectName(QStringLiteral("tabWidget_3"));
+        tabWidget_3->setGeometry(QRect(0, 30, 1001, 561));
+        tab_18 = new QWidget();
+        tab_18->setObjectName(QStringLiteral("tab_18"));
+        lineEdit = new QLineEdit(tab_18);
+        lineEdit->setObjectName(QStringLiteral("lineEdit"));
+        lineEdit->setGeometry(QRect(10, 30, 113, 20));
+        lineEdit_2 = new QLineEdit(tab_18);
+        lineEdit_2->setObjectName(QStringLiteral("lineEdit_2"));
+        lineEdit_2->setGeometry(QRect(10, 80, 113, 20));
+        lineEdit_3 = new QLineEdit(tab_18);
+        lineEdit_3->setObjectName(QStringLiteral("lineEdit_3"));
+        lineEdit_3->setGeometry(QRect(10, 130, 113, 20));
+        lineEdit_4 = new QLineEdit(tab_18);
+        lineEdit_4->setObjectName(QStringLiteral("lineEdit_4"));
+        lineEdit_4->setGeometry(QRect(10, 180, 113, 20));
+        label_22 = new QLabel(tab_18);
+        label_22->setObjectName(QStringLiteral("label_22"));
+        label_22->setGeometry(QRect(10, 10, 101, 16));
+        label_23 = new QLabel(tab_18);
+        label_23->setObjectName(QStringLiteral("label_23"));
+        label_23->setGeometry(QRect(10, 60, 101, 16));
+        label_27 = new QLabel(tab_18);
+        label_27->setObjectName(QStringLiteral("label_27"));
+        label_27->setGeometry(QRect(10, 110, 91, 16));
+        label_29 = new QLabel(tab_18);
+        label_29->setObjectName(QStringLiteral("label_29"));
+        label_29->setGeometry(QRect(10, 160, 111, 16));
+        groupBox_28 = new QGroupBox(tab_18);
+        groupBox_28->setObjectName(QStringLiteral("groupBox_28"));
+        groupBox_28->setGeometry(QRect(150, 20, 201, 241));
+        radioButton_11 = new QRadioButton(groupBox_28);
+        radioButton_11->setObjectName(QStringLiteral("radioButton_11"));
+        radioButton_11->setGeometry(QRect(10, 20, 211, 17));
+        radioButton_12 = new QRadioButton(groupBox_28);
+        radioButton_12->setObjectName(QStringLiteral("radioButton_12"));
+        radioButton_12->setGeometry(QRect(10, 40, 211, 17));
+        radioButton_13 = new QRadioButton(groupBox_28);
+        radioButton_13->setObjectName(QStringLiteral("radioButton_13"));
+        radioButton_13->setGeometry(QRect(10, 60, 211, 17));
+        radioButton_14 = new QRadioButton(groupBox_28);
+        radioButton_14->setObjectName(QStringLiteral("radioButton_14"));
+        radioButton_14->setGeometry(QRect(10, 80, 211, 17));
+        radioButton_15 = new QRadioButton(groupBox_28);
+        radioButton_15->setObjectName(QStringLiteral("radioButton_15"));
+        radioButton_15->setGeometry(QRect(10, 100, 211, 17));
+        radioButton_16 = new QRadioButton(groupBox_28);
+        radioButton_16->setObjectName(QStringLiteral("radioButton_16"));
+        radioButton_16->setGeometry(QRect(10, 120, 211, 17));
+        radioButton_18 = new QRadioButton(groupBox_28);
+        radioButton_18->setObjectName(QStringLiteral("radioButton_18"));
+        radioButton_18->setGeometry(QRect(10, 140, 211, 17));
+        radioButton_19 = new QRadioButton(groupBox_28);
+        radioButton_19->setObjectName(QStringLiteral("radioButton_19"));
+        radioButton_19->setGeometry(QRect(10, 160, 211, 17));
+        radioButton_20 = new QRadioButton(groupBox_28);
+        radioButton_20->setObjectName(QStringLiteral("radioButton_20"));
+        radioButton_20->setGeometry(QRect(10, 180, 211, 17));
+        radioButton_21 = new QRadioButton(groupBox_28);
+        radioButton_21->setObjectName(QStringLiteral("radioButton_21"));
+        radioButton_21->setGeometry(QRect(10, 200, 211, 17));
+        radioButton_22 = new QRadioButton(groupBox_28);
+        radioButton_22->setObjectName(QStringLiteral("radioButton_22"));
+        radioButton_22->setGeometry(QRect(10, 220, 211, 17));
+        groupBox_29 = new QGroupBox(tab_18);
+        groupBox_29->setObjectName(QStringLiteral("groupBox_29"));
+        groupBox_29->setGeometry(QRect(370, 20, 201, 101));
+        radioButton_17 = new QRadioButton(groupBox_29);
+        radioButton_17->setObjectName(QStringLiteral("radioButton_17"));
+        radioButton_17->setGeometry(QRect(10, 20, 161, 17));
+        radioButton_23 = new QRadioButton(groupBox_29);
+        radioButton_23->setObjectName(QStringLiteral("radioButton_23"));
+        radioButton_23->setGeometry(QRect(10, 40, 151, 17));
+        radioButton_24 = new QRadioButton(groupBox_29);
+        radioButton_24->setObjectName(QStringLiteral("radioButton_24"));
+        radioButton_24->setGeometry(QRect(10, 60, 151, 17));
+        radioButton_25 = new QRadioButton(groupBox_29);
+        radioButton_25->setObjectName(QStringLiteral("radioButton_25"));
+        radioButton_25->setGeometry(QRect(10, 80, 171, 17));
+        groupBox_30 = new QGroupBox(tab_18);
+        groupBox_30->setObjectName(QStringLiteral("groupBox_30"));
+        groupBox_30->setGeometry(QRect(370, 130, 201, 61));
+        radioButton_26 = new QRadioButton(groupBox_30);
+        radioButton_26->setObjectName(QStringLiteral("radioButton_26"));
+        radioButton_26->setGeometry(QRect(10, 20, 82, 17));
+        radioButton_27 = new QRadioButton(groupBox_30);
+        radioButton_27->setObjectName(QStringLiteral("radioButton_27"));
+        radioButton_27->setGeometry(QRect(10, 40, 82, 17));
+        groupBox_31 = new QGroupBox(tab_18);
+        groupBox_31->setObjectName(QStringLiteral("groupBox_31"));
+        groupBox_31->setGeometry(QRect(370, 200, 201, 61));
+        radioButton_28 = new QRadioButton(groupBox_31);
+        radioButton_28->setObjectName(QStringLiteral("radioButton_28"));
+        radioButton_28->setGeometry(QRect(10, 20, 82, 17));
+        radioButton_29 = new QRadioButton(groupBox_31);
+        radioButton_29->setObjectName(QStringLiteral("radioButton_29"));
+        radioButton_29->setGeometry(QRect(10, 40, 82, 17));
+        groupBox_32 = new QGroupBox(tab_18);
+        groupBox_32->setObjectName(QStringLiteral("groupBox_32"));
+        groupBox_32->setGeometry(QRect(20, 280, 331, 61));
+        radioButton_30 = new QRadioButton(groupBox_32);
+        radioButton_30->setObjectName(QStringLiteral("radioButton_30"));
+        radioButton_30->setGeometry(QRect(10, 20, 261, 17));
+        radioButton_31 = new QRadioButton(groupBox_32);
+        radioButton_31->setObjectName(QStringLiteral("radioButton_31"));
+        radioButton_31->setGeometry(QRect(10, 40, 291, 17));
+        groupBox_33 = new QGroupBox(tab_18);
+        groupBox_33->setObjectName(QStringLiteral("groupBox_33"));
+        groupBox_33->setGeometry(QRect(360, 280, 321, 61));
+        radioButton_32 = new QRadioButton(groupBox_33);
+        radioButton_32->setObjectName(QStringLiteral("radioButton_32"));
+        radioButton_32->setGeometry(QRect(10, 20, 201, 17));
+        radioButton_33 = new QRadioButton(groupBox_33);
+        radioButton_33->setObjectName(QStringLiteral("radioButton_33"));
+        radioButton_33->setGeometry(QRect(10, 40, 211, 17));
+        groupBox_34 = new QGroupBox(tab_18);
+        groupBox_34->setObjectName(QStringLiteral("groupBox_34"));
+        groupBox_34->setGeometry(QRect(580, 10, 321, 181));
+        radioButton_34 = new QRadioButton(groupBox_34);
+        radioButton_34->setObjectName(QStringLiteral("radioButton_34"));
+        radioButton_34->setGeometry(QRect(10, 20, 381, 51));
+        radioButton_35 = new QRadioButton(groupBox_34);
+        radioButton_35->setObjectName(QStringLiteral("radioButton_35"));
+        radioButton_35->setGeometry(QRect(10, 70, 301, 61));
+        radioButton_36 = new QRadioButton(groupBox_34);
+        radioButton_36->setObjectName(QStringLiteral("radioButton_36"));
+        radioButton_36->setGeometry(QRect(10, 130, 341, 41));
+        tabWidget_3->addTab(tab_18, QString());
+        tab_19 = new QWidget();
+        tab_19->setObjectName(QStringLiteral("tab_19"));
+        tabWidget_3->addTab(tab_19, QString());
+        tab_17 = new QWidget();
+        tab_17->setObjectName(QStringLiteral("tab_17"));
+        comboBox_17 = new QComboBox(tab_17);
+        comboBox_17->setObjectName(QStringLiteral("comboBox_17"));
+        comboBox_17->setGeometry(QRect(0, 0, 991, 22));
+        tabWidget_3->addTab(tab_17, QString());
+        tabWidget->addTab(tab_16, QString());
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QStringLiteral("menuBar"));
@@ -887,7 +1080,8 @@ public:
         retranslateUi(MainWindow);
 
         tabWidget->setCurrentIndex(1);
-        tabWidget_2->setCurrentIndex(6);
+        tabWidget_2->setCurrentIndex(12);
+        tabWidget_3->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -1367,14 +1561,6 @@ public:
         label_37->setText(QApplication::translate("MainWindow", "\320\224\320\265\320\273\320\270\321\202\320\265\320\273\321\214 \321\202\320\260\320\272\321\202\320\276\320\262\320\276\320\271 \321\207\320\260\321\201\321\202\320\276\321\202\321\213", 0));
         checkBox_68->setText(QApplication::translate("MainWindow", "\320\222\320\272\320\273\321\216\321\207\320\270\321\202\321\214 \320\277\320\276\320\275\320\270\320\266\320\265\320\275\320\275\320\276\320\265 \321\215\320\273\320\265\320\272\321\202\321\200\320\276\320\277\320\276\321\202\321\200\320\265\320\261\320\273\320\265\320\275\320\270\320\265", 0));
         groupBox_16->setTitle(QApplication::translate("MainWindow", "\320\223\320\236\320\241\320\242\320\24052070-2003", 0));
-        label_20->setText(QApplication::translate("MainWindow", "\320\222\321\213\320\261\320\276\321\200 \320\270\321\201\321\202\320\276\320\275\320\270\321\207\320\272\320\260 \321\207\320\260\321\201\321\202\320\276\321\202\321\213", 0));
-        comboBox_36->clear();
-        comboBox_36->insertItems(0, QStringList()
-         << QApplication::translate("MainWindow", "HSI", 0)
-         << QApplication::translate("MainWindow", "HSE", 0)
-         << QApplication::translate("MainWindow", "PLLCPUo", 0)
-         << QApplication::translate("MainWindow", "HSE2", 0)
-        );
         checkBox_86->setText(QApplication::translate("MainWindow", "\321\200\320\260\320\267\321\200\320\265\321\210\320\270\321\202\321\214 \321\202\320\260\320\272\321\202\320\276\320\262\321\203\321\216 \321\207\320\260\321\201\321\202\320\276\321\202\321\203", 0));
         comboBox_37->clear();
         comboBox_37->insertItems(0, QStringList()
@@ -1387,8 +1573,69 @@ public:
          << QApplication::translate("MainWindow", "128", 0)
         );
         label_38->setText(QApplication::translate("MainWindow", "\320\224\320\265\320\273\320\270\321\202\320\265\320\273\321\214 \321\202\320\260\320\272\321\202\320\276\320\262\320\276\320\271 \321\207\320\260\321\201\321\202\320\276\321\202\321\213", 0));
+        groupBox_35->setTitle(QApplication::translate("MainWindow", "Ethernet MAC", 0));
+        checkBox_87->setText(QApplication::translate("MainWindow", "\321\200\320\260\320\267\321\200\320\265\321\210\320\270\321\202\321\214 \321\202\320\260\320\272\321\202\320\276\320\262\321\203\321\216 \321\207\320\260\321\201\321\202\320\276\321\202\321\203", 0));
         tabWidget_2->setTabText(tabWidget_2->indexOf(tab_15), QApplication::translate("MainWindow", "Ethernet", 0));
         tabWidget->setTabText(tabWidget->indexOf(tab_2), QApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \321\202\320\260\320\272\321\202\320\270\321\200\320\276\320\262\320\260\320\275\320\270\320\265\320\274", 0));
+        comboBox_16->clear();
+        comboBox_16->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "1", 0)
+         << QApplication::translate("MainWindow", "2", 0)
+         << QApplication::translate("MainWindow", "3", 0)
+         << QApplication::translate("MainWindow", "4", 0)
+        );
+        label_22->setText(QApplication::translate("MainWindow", "\320\227\320\275\320\260\321\207\320\265\320\275\320\270\320\265 \321\201\321\207\320\265\321\202\321\207\320\270\320\272\320\260 ", 0));
+        label_23->setText(QApplication::translate("MainWindow", "\320\224\320\265\320\273\320\270\321\202\320\265\320\273\321\214 \321\207\320\260\321\201\321\202\320\276\321\202\321\213 ", 0));
+        label_27->setText(QApplication::translate("MainWindow", "\320\236\321\201\320\275\320\276\320\262\320\260\320\275\320\270\320\265 \321\201\321\207\320\265\321\202", 0));
+        label_29->setText(QApplication::translate("MainWindow", "\320\240\320\265\320\263\320\270\321\201\321\202\321\200 \321\203\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\321\217", 0));
+        groupBox_28->setTitle(QApplication::translate("MainWindow", "\320\230\321\201\321\202\320\276\321\207\320\275\320\270\320\272 \321\201\320\276\320\261\321\213\321\202\320\270\320\271", 0));
+        radioButton_11->setText(QApplication::translate("MainWindow", "C\320\276\320\261\321\213\321\202\320\270\320\265 \320\277\320\265\321\200\320\265\320\264\320\275\320\265\320\263\320\276 \321\204\321\200\320\276\320\275\321\202\320\260", 0));
+        radioButton_12->setText(QApplication::translate("MainWindow", "ARR \320\262 \321\202\320\260\320\271\320\274\320\265\321\200\320\265 1 ", 0));
+        radioButton_13->setText(QApplication::translate("MainWindow", "ARR \320\262 \321\202\320\260\320\271\320\274\320\265\321\200\320\265 2 ", 0));
+        radioButton_14->setText(QApplication::translate("MainWindow", "ARR \320\262 \321\202\320\260\320\271\320\274\320\265\321\200\320\265 3", 0));
+        radioButton_15->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\275\320\260 \320\277\320\265\321\200\320\262\320\276\320\274 \320\272\320\260\320\275\320\260\320\273", 0));
+        radioButton_16->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\275\320\260 \320\262\321\202\320\276\321\200\320\276\320\274 \320\272\320\260\320\275\320\260\320\273", 0));
+        radioButton_18->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\275\320\260 \321\202\321\200\320\265\321\202\321\214\320\265\320\274 \320\272\320\260\320\275\320\260\320\273", 0));
+        radioButton_19->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\275\320\260 \321\207\320\265\321\202\320\262\321\221\321\200\321\202\320\276\320\274 \320\272\320\260\320\275\320\260\320\273", 0));
+        radioButton_20->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\277\320\265\321\200\320\265\320\264\320\275\320\265\320\263\320\276 \321\204\321\200\320\276\320\275\321\202\320\260 ETR", 0));
+        radioButton_21->setText(QApplication::translate("MainWindow", "\320\241\320\276\320\261\321\213\321\202\320\270\320\265 \320\267\320\260\320\264\320\275\320\265\320\263\320\276 \321\204\321\200\320\276\320\275\321\202\320\260 ETR", 0));
+        radioButton_22->setText(QApplication::translate("MainWindow", "ARR \320\262 \321\202\320\260\320\271\320\274\320\265\321\200\320\265 4 ", 0));
+        groupBox_29->setTitle(QApplication::translate("MainWindow", "\320\247\320\260\321\201\321\202\320\276\321\202\320\260 \321\201\320\265\320\274\320\277\320\273\320\270\321\200\320\276\320\262\320\260\320\275\320\270\321\217 \320\264\320\260\320\275\320\275\321\213\321\205 FDTS ", 0));
+        radioButton_17->setText(QApplication::translate("MainWindow", "\320\272\320\260\320\266\320\264\321\213\320\271 TIM_CLK", 0));
+        radioButton_23->setText(QApplication::translate("MainWindow", "\320\272\320\260\320\266\320\264\321\213\320\271 \320\262\321\202\320\276\321\200\320\276\320\271 TIM_CLK", 0));
+        radioButton_24->setText(QApplication::translate("MainWindow", "\320\272\320\260\320\266\320\264\321\213\320\271 \321\202\321\200\320\265\321\202\321\214\320\265\320\271 TIM_CLK", 0));
+        radioButton_25->setText(QApplication::translate("MainWindow", "\320\272\320\260\320\266\320\264\321\213\320\271 \321\207\320\265\321\202\320\262\321\221\321\200\321\202\321\213\320\271 TIM_CLK", 0));
+        groupBox_30->setTitle(QApplication::translate("MainWindow", "\320\235\320\260\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \321\201\321\207\320\265\321\202\320\260", 0));
+        radioButton_26->setText(QApplication::translate("MainWindow", "\320\222\320\262\320\265\321\200\321\205", 0));
+        radioButton_27->setText(QApplication::translate("MainWindow", "\320\222\320\275\320\270\320\267", 0));
+        groupBox_31->setTitle(QApplication::translate("MainWindow", "\320\240\320\260\320\267\321\200\320\265\321\210\320\265\320\275\320\270\320\265 \321\200\320\260\320\261\320\276\321\202\321\213 \321\202\320\260\320\271\320\274\320\265\321\200\320\260", 0));
+        radioButton_28->setText(QApplication::translate("MainWindow", "\320\242\320\260\320\271\320\274\320\265\321\200 \320\276\321\202\320\272\320\273\321\216\321\207\321\221\320\275", 0));
+        radioButton_29->setText(QApplication::translate("MainWindow", "\320\242\320\260\320\271\320\274\320\265\321\200 \320\262\320\272\320\273", 0));
+        groupBox_32->setTitle(QApplication::translate("MainWindow", "\320\240\320\260\320\267\321\200\320\265\321\210\320\265\320\275\320\270\320\265 \320\274\320\263\320\275\320\276\320\262\320\265\320\275\320\275\320\276\320\263\320\276 \320\276\320\261\320\275\320\276\320\262\320\273\320\265\320\275\320\270\321\217 ARR", 0));
+        radioButton_30->setText(QApplication::translate("MainWindow", "ARR \320\261\321\203\320\264\320\265\321\202 \320\277\320\265\321\200\320\265\320\267\320\260\320\277\320\270\321\201\320\260\320\275 \320\262 \320\274\320\276\320\274\320\265\320\275\321\202 \320\267\320\260\320\277\320\270\321\201\320\270 \320\262 ARR", 0));
+        radioButton_31->setText(QApplication::translate("MainWindow", "ARR \320\261\321\203\320\264\320\265\321\202 \320\277\320\265\321\200\320\265\320\267\320\260\320\277\320\270\321\201\320\260\320\275 \320\277\321\200\320\270 \320\267\320\260\320\262\320\265\321\200\321\210\320\265\320\275\320\270\320\270 \321\201\321\207\320\265\321\202\320\260 CNT", 0));
+        groupBox_33->setTitle(QApplication::translate("MainWindow", "\320\236\320\272\320\276\320\275\321\207\320\260\320\275\320\270\320\265 \320\267\320\260\320\277\320\270\321\201\320\270, \320\277\321\200\320\270 \320\267\320\260\320\264\320\260\320\275\320\270\320\270 \320\275\320\276\320\262\320\276\320\263\320\276 \320\267\320\275\320\260\321\207\320\265\320\275\320\270\321\217 \321\200\320\265\320\263\320\270\321\201\321\202\321\200\320\276\320\262 ", 0));
+        radioButton_32->setText(QApplication::translate("MainWindow", "\320\235\320\276\320\262\321\213\320\265 \320\264\320\260\320\275\320\275\321\213\320\265 \320\274\320\276\320\266\320\275\320\276 \320\267\320\260\320\277\320\270\321\201\321\213\320\262\320\260\321\202\321\214", 0));
+        radioButton_33->setText(QApplication::translate("MainWindow", "\320\224\320\260\320\275\320\275\321\213\320\265 \320\275\320\265 \320\267\320\260\320\277\320\270\321\201\320\260\320\275\321\213 \320\270 \320\270\320\264\320\265\321\202 \320\267\320\260\320\277\320\270\321\201\321\214 ", 0));
+        groupBox_34->setTitle(QApplication::translate("MainWindow", "\320\240\320\265\320\266\320\270\320\274 \321\201\321\207\321\221\321\202\320\260", 0));
+        radioButton_34->setText(QApplication::translate("MainWindow", "\321\201\321\207\320\265\321\202\321\207\320\270\320\272 \320\262\320\262\320\265\321\200\321\205 \320\277\321\200\320\270 DIR=0   \n"
+"c\321\207\320\265\321\202\321\207\320\270\320\272 \320\262\320\275\320\270\320\267 \320\277\321\200\320\270 DIR=1       \n"
+"\320\277\321\200\320\270 PSG = 0", 0));
+        radioButton_35->setText(QApplication::translate("MainWindow", "\321\201\321\207\320\265\321\202\321\207\320\270\320\272 \320\262\320\262\320\265\321\200\321\205/\320\262\320\275\320\270\320\267 \321\201 \320\260\320\262\321\202\320\276\320\274\320\260\321\202\320\270\321\207\320\265\321\201\320\272\320\270\320\274 \320\270\320\267\320\274\320\265\320\275\320\265\320\275\320\270\320\265\320\274 DIR\n"
+" \320\277\321\200\320\270 CNT = 0 \320\270\320\273\320\270 CNT = ARR ", 0));
+        radioButton_36->setText(QApplication::translate("MainWindow", "\321\201\321\207\320\265\321\202\321\207\320\270\320\272 \320\262\320\262\320\265\321\200\321\205 \320\277\321\200\320\270 DIR=0   \n"
+"      c\321\207\320\265\321\202\321\207\320\270\320\272 \320\262\320\275\320\270\320\267 \320\277\321\200\320\270 DIR=1", 0));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_18), QApplication::translate("MainWindow", "\320\236\321\201\320\275\320\276\320\262\320\275\320\276\320\271 \321\202\320\260\320\271\320\274\320\265\321\200", 0));
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_19), QApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \321\202\320\260\320\271\320\274\320\265\321\200\320\260\320\274\320\270", 0));
+        comboBox_17->clear();
+        comboBox_17->insertItems(0, QStringList()
+         << QApplication::translate("MainWindow", "1", 0)
+         << QApplication::translate("MainWindow", "2", 0)
+         << QApplication::translate("MainWindow", "3", 0)
+         << QApplication::translate("MainWindow", "4", 0)
+        );
+        tabWidget_3->setTabText(tabWidget_3->indexOf(tab_17), QApplication::translate("MainWindow", "\320\243\320\277\321\200\320\260\320\262\320\273\320\265\320\275\320\270\320\265 \320\272\320\260\320\275\320\260\320\273\320\260\320\274\320\270", 0));
+        tabWidget->setTabText(tabWidget->indexOf(tab_16), QApplication::translate("MainWindow", "\320\242\320\260\320\271\320\274\320\265\321\200\321\213", 0));
         menu->setTitle(QApplication::translate("MainWindow", "\320\244\320\260\320\271\320\273", 0));
     } // retranslateUi
 
