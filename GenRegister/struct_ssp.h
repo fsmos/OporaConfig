@@ -92,7 +92,7 @@ struct SSP_MIS
 struct SSP_ICR
 {
    enum Switches write_RTIC;
-   enum Switches write_ROTIC;
+   enum Switches write_RORIC;
 };
 
 struct SSP_DMACR
@@ -108,6 +108,7 @@ struct global_SSP
   struct SSP_DR SSP_DRR;
   struct SSP_SR SSP_SRR;
   struct SSP_CPSR SSP_CPSRR;
+  struct SSP_IMSC SSP_IMSCR;
   struct SSP_RIS SSP_RISR;
   struct SSP_MIS SSP_MISR;
   struct SSP_ICR SSP_ICRR;

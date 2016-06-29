@@ -59,6 +59,7 @@ OporaDataStruct MainWindow::GenerateStruct()
    // if (ui->APIN1STON->isChecked()) ops.GPIOPort[0].Pin[0].RXTX=On;
     //else ops.GPIOPort[0].Pin[0].RXTX=Off;
     SaveGPIO(GPIO_port,GPIO_pin);
+    SaveCLK();
     return SetingOPoraStruct;
 }
 
@@ -66,6 +67,7 @@ void MainWindow::IndicateData(OporaDataStruct ops)
 {
 //ui->lineEdit->setText(QString("%1").arg(ops.Er1.el1.ExampleParamet));
 LoadGPIO(0,0);
+LoadCLK();
 }
 
 void MainWindow::on_FileOpen_toggled(bool arg1)

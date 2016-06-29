@@ -60,7 +60,7 @@ enum RXIFLSELA
 enum EPSS
 {
     chet=1,
-    necet=0
+    nechet=0
 };
 
 

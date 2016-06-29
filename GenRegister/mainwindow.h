@@ -43,6 +43,10 @@ private slots:
 
     void SaveCLK();
     void LoadCLK();
+    void SaveUART(int uart);
+    void LoadUART(int uart);
+    void LoadSSP(int SSP);
+    void SaveSSP(int SSP);
 
 private:
     Ui::MainWindow *ui;

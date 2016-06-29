@@ -14,7 +14,9 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    struct_clk.cpp
+    struct_clk.cpp \
+    struct_uart.cpp \
+    struct_ssp.cpp
 
 HEADERS  += mainwindow.h \
     struct_code.h \
