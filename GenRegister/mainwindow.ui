@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -8122,7 +8122,7 @@ cчетчик вниз при DIR=1
        </rect>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab_27">
        <attribute name="title">
@@ -8710,7 +8710,7 @@ cчетчик вниз при DIR=1
      <x>0</x>
      <y>0</y>
      <width>1010</width>
-     <height>27</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

@@ -13,6 +13,9 @@
 
 void MainWindow::SaveSSP(int SSP)
 {
+   if(ui->checkBox_181->isChecked()) this->SetingOPoraStruct.PER_SSP[SSP].SSP_DRR.SSP_read_DATA=On;
+   else this->SetingOPoraStruct.PER_SSP[SSP].SSP_DRR.SSP_read_DATA=Off;
+
    if (ui->checkBox_182->isChecked()) this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.SPH=On;
    else this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.SPH = Off;
 
@@ -21,27 +24,27 @@ void MainWindow::SaveSSP(int SSP)
 
    switch (ui->comboBox_41->currentIndex())
    {
-       case 0: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = SPI_M;
-       case 1: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = SSI_TI;
-       case 2: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = MW_NS;
-       case 3: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = RSRV;
+       case 0: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = SPI_M;break;
+       case 1: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = SSI_TI;break;
+       case 2: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = MW_NS;break;
+       case 3: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF = RSRV;break;
     }
 
-   switch (ui->comboBox_41->currentIndex())
+   switch (ui->comboBox_42->currentIndex())
    {
-       case 0: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit4;
-       case 1: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit5;
-       case 2: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit6;
-       case 3: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit7;
-       case 4: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit8;
-       case 5: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit9;
-       case 6: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit10;
-       case 7: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit11;
-       case 8: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit12;
-       case 9: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit13;
-       case 10: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit14;
-       case 11: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit15;
-       case 12: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit16;
+       case 0: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit4;break;
+       case 1: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit5;break;
+       case 2: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit6;break;
+       case 3: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit7;break;
+       case 4: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit8;break;
+       case 5: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit9;break;
+       case 6: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit10;break;
+       case 7: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit11;break;
+       case 8: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit12;break;
+       case 9: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit13;break;
+       case 10: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit14;break;
+       case 11: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit15;break;
+       case 12: this->SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS = bit16;break;
    }
 
 
@@ -114,5 +117,119 @@ void MainWindow::SaveSSP(int SSP)
 
 void MainWindow::LoadSSP(int SSP)
 {
+   if (SetingOPoraStruct.PER_SSP[SSP].SSP_DRR.SSP_read_DATA == On) ui->checkBox_181->setChecked(true);
+                                                             else ui->checkBox_181->setChecked(false);
 
+   if (SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.SPH == On) ui->checkBox_182->setChecked(true);
+                                                   else ui->checkBox_182->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.SPO == On) ui->checkBox_183->setChecked(true);
+                                                   else ui->checkBox_183->setChecked(false);
+  switch (SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.FRF)
+  {
+      case SPI_M: ui->comboBox_41->setCurrentIndex(0);break;
+      case SSI_TI: ui->comboBox_41->setCurrentIndex(1);break;
+      case MW_NS: ui->comboBox_41->setCurrentIndex(2);break;
+      case RSRV: ui->comboBox_41->setCurrentIndex(3);break;
+  }
+
+  switch (SetingOPoraStruct.PER_SSP[SSP].SSP_CR0R.DDS)
+  {
+      case bit4: ui->comboBox_42->setCurrentIndex(0);break;
+      case bit5: ui->comboBox_42->setCurrentIndex(1);break;
+      case bit6: ui->comboBox_42->setCurrentIndex(2);break;
+      case bit7: ui->comboBox_42->setCurrentIndex(3);break;
+      case bit8: ui->comboBox_42->setCurrentIndex(4);break;
+      case bit9: ui->comboBox_42->setCurrentIndex(5);break;
+      case bit10: ui->comboBox_42->setCurrentIndex(6);break;
+      case bit11: ui->comboBox_42->setCurrentIndex(7);break;
+      case bit12: ui->comboBox_42->setCurrentIndex(8);break;
+      case bit13: ui->comboBox_42->setCurrentIndex(9);break;
+      case bit14: ui->comboBox_42->setCurrentIndex(10);break;
+      case bit15: ui->comboBox_42->setCurrentIndex(11);break;
+      case bit16: ui->comboBox_42->setCurrentIndex(12);break;
+  }
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_CPR.SOD == On) ui->checkBox_184->setChecked(true);
+                                                  else ui->checkBox_184->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_CPR.MS == On) ui->checkBox_185->setChecked(true);
+                                                 else ui->checkBox_185->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_CPR.SSE == On) ui->checkBox_186->setChecked(true);
+                                                  else ui->checkBox_186->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_CPR.LBM == On) ui->checkBox_187->setChecked(true);
+                                                  else ui->checkBox_187->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_DRR.SSP_read_DATA == On) ui->checkBox_188->setChecked(true);
+                                                            else ui->checkBox_188->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_SRR.read_BSY == On) ui->checkBox_189->setChecked(true);
+                                                       else ui->checkBox_189->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_SRR.read_RFF == On) ui->checkBox_194->setChecked(true);
+                                                       else ui->checkBox_194->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_SRR.read_RNE == On) ui->checkBox_190->setChecked(true);
+                                                       else ui->checkBox_190->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_SRR.read_TNF == On) ui->checkBox_193->setChecked(true);
+                                                       else ui->checkBox_193->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_SRR.read_TFE == On) ui->checkBox_191->setChecked(true);
+                                                       else ui->checkBox_191->setChecked(false);
+
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_RISR.read_TXRIS == On) ui->checkBox_198->setChecked(true);
+                                                          else ui->checkBox_198->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_RISR.read_RXRIS == On) ui->checkBox_199->setChecked(true);
+                                                          else ui->checkBox_199->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_RISR.read_RTRIS == On) ui->checkBox_200->setChecked(true);
+                                                          else ui->checkBox_200->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_RISR.read_RORRIS == On) ui->checkBox_202->setChecked(true);
+                                                           else ui->checkBox_202->setChecked(false);
+
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_MISR.read_TXMIS == On) ui->checkBox_203->setChecked(true);
+                                                          else ui->checkBox_203->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_MISR.read_RXMIS == On) ui->checkBox_204->setChecked(true);
+                                                          else ui->checkBox_204->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_MISR.read_RTMIS == On) ui->checkBox_205->setChecked(true);
+                                                          else ui->checkBox_205->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_MISR.read_RORMIS == On) ui->checkBox_206->setChecked(true);
+                                                           else ui->checkBox_206->setChecked(false);
+
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_IMSCR.TXIM == On) ui->checkBox_192->setChecked(true);
+                                                     else ui->checkBox_192->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_IMSCR.RXIM == On) ui->checkBox_195->setChecked(true);
+                                                     else ui->checkBox_195->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_IMSCR.RTIM == On) ui->checkBox_196->setChecked(true);
+                                                     else ui->checkBox_196->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_IMSCR.RORIM == On) ui->checkBox_197->setChecked(true);
+                                                     else ui->checkBox_197->setChecked(false);
+
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_ICRR.write_RTIC == On) ui->checkBox_207->setChecked(true);
+                                                          else ui->checkBox_207->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_ICRR.write_RORIC == On) ui->checkBox_208->setChecked(true);
+                                                           else ui->checkBox_208->setChecked(false);
+
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_DMACRR.TXDMAE == On) ui->checkBox_209->setChecked(true);
+                                                        else ui->checkBox_209->setChecked(false);
+
+  if (SetingOPoraStruct.PER_SSP[SSP].SSP_DMACRR.RXDMAE == On) ui->checkBox_210->setChecked(true);
+                                                        else ui->checkBox_210->setChecked(false);
 }
