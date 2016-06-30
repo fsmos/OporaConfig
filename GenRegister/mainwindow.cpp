@@ -60,7 +60,7 @@ OporaDataStruct MainWindow::GenerateStruct()
     //else ops.GPIOPort[0].Pin[0].RXTX=Off;
     SaveGPIO(GPIO_port,GPIO_pin);
     SaveCLK();
-    //SaveUART(UARTIndex);
+    SaveUART(UARTIndex);
     SaveSSP(SSPIndex);
     return SetingOPoraStruct;
 }

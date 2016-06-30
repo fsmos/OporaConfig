@@ -22,7 +22,7 @@ struct OporaDataStruct
 {
 struct GPIOStruct GPIOPort[6]; ///< настройка портов микроконтроллера
 struct CLK_GLOBAL OPORA_CLOCK;
-struct TIMER_Global PER_TIMER[4];
+//struct TIMER_Global PER_TIMER[4];
 struct uart_global PER_UART[2];
 struct global_SSP PER_SSP[3];
 };

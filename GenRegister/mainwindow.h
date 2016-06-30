@@ -19,10 +19,10 @@ public:
     int GPIO_port=0;
     int GPIO_pin=0;
     OporaDataStruct SetingOPoraStruct;
-    int UARTIndex;
-    int SSPIndex;
-    int TIMERIndex;
-    int TIMERChannelIndex;
+    int UARTIndex=0;
+    int SSPIndex=0;
+    int TIMERIndex=0;
+    int TIMERChannelIndex=0;
 private slots:
     void on_FileOpen_toggled(bool arg1);
     void IndicateData(OporaDataStruct ops);
