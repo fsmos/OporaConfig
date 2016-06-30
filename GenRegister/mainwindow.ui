@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>4</number>
+     <number>2</number>
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
@@ -3413,22 +3413,22 @@
       </property>
       <item>
        <property name="text">
-        <string>1</string>
+        <string>TIMER1</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>2</string>
+        <string>TIMER2</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>3</string>
+        <string>TIMER3</string>
        </property>
       </item>
       <item>
        <property name="text">
-        <string>4</string>
+        <string>TIMER4</string>
        </property>
       </item>
      </widget>
@@ -6215,22 +6215,22 @@ cчетчик вниз при DIR=1
         </property>
         <item>
          <property name="text">
-          <string>1</string>
+          <string>Channel0</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>2</string>
+          <string>Channel1</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>3</string>
+          <string>Channel2</string>
          </property>
         </item>
         <item>
          <property name="text">
-          <string>4</string>
+          <string>Channel3</string>
          </property>
         </item>
        </widget>
@@ -6686,7 +6686,7 @@ cчетчик вниз при DIR=1
         <x>0</x>
         <y>0</y>
         <width>1011</width>
-        <height>31</height>
+        <height>21</height>
        </rect>
       </property>
       <item>
@@ -6704,7 +6704,7 @@ cчетчик вниз при DIR=1
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>30</y>
+        <y>20</y>
         <width>1001</width>
         <height>531</height>
        </rect>
@@ -8710,7 +8710,7 @@ cчетчик вниз при DIR=1
      <x>0</x>
      <y>0</y>
      <width>1010</width>
-     <height>21</height>
+     <height>27</height>
     </rect>
    </property>
    <widget class="QMenu" name="menu">

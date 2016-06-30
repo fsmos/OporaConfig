@@ -16,14 +16,16 @@ SOURCES += main.cpp\
         mainwindow.cpp \
     struct_clk.cpp \
     struct_uart.cpp \
-    struct_ssp.cpp
+    struct_ssp.cpp \
+    struct_gpio.cpp
 
 HEADERS  += mainwindow.h \
     struct_code.h \
     struct_clk.h \
     struct_timer.h \
     struct_ssp.h \
-    struct_uart.h
+    struct_uart.h \
+    struct_gpio.h
 
 FORMS    += mainwindow.ui
 

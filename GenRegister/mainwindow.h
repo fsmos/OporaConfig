@@ -19,6 +19,10 @@ public:
     int GPIO_port=0;
     int GPIO_pin=0;
     OporaDataStruct SetingOPoraStruct;
+    int UARTIndex;
+    int SSPIndex;
+    int TIMERIndex;
+    int TIMERChannelIndex;
 private slots:
     void on_FileOpen_toggled(bool arg1);
     void IndicateData(OporaDataStruct ops);
@@ -45,8 +49,17 @@ private slots:
     void LoadCLK();
     void SaveUART(int uart);
     void LoadUART(int uart);
+
     void LoadSSP(int SSP);
     void SaveSSP(int SSP);
+
+    void on_comboBox_19_currentIndexChanged(int index);
+
+    void on_comboBox_39_currentIndexChanged(int index);
+
+    void on_comboBox_16_currentIndexChanged(int index);
+
+    void on_comboBox_24_currentIndexChanged(int index);
 
 private:
     Ui::MainWindow *ui;

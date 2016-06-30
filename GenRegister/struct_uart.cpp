@@ -1,3 +1,12 @@
+/**
+*\file
+*\brief Файл данных для генератора кода UART
+*\author Шепелева Ирина
+*\version 1.0
+*\date 30 июня 2016 года
+*В этом файле находится набор стрктур для генерации кода UART
+*/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "struct_code.h"

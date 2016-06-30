@@ -1,8 +1,15 @@
+/**
+*\file
+*\brief Файл данных для генератора кода настроек тактирования
+*\author Ярошенко Артур
+*\version 1.0
+*\date 30 июня 2016 года
+*В этом файле находится набор стрктур для генерации кода настроек тактирования
+*/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "struct_code.h"
-#include <qfile.h>
-#include <qfiledialog.h>
 
 void MainWindow::SaveCLK()
 {
