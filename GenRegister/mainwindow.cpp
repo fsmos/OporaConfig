@@ -14,7 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 void MainWindow::InitStruct()
 {
 int i,j;
-for (i=0; i<6; ++i)
+/*for (i=0; i<6; ++i)
      {
       for (j=0; j<16; ++j)
       {
@@ -33,6 +33,10 @@ for (i=0; i<6; ++i)
       }
      }
 LoadGPIO(0,0);
+*/
+
+memset(&SetingOPoraStruct,0,sizeof(struct OporaDataStruct));
+IndicateData(SetingOPoraStruct);
 }
 
 MainWindow::~MainWindow()
@@ -71,11 +75,15 @@ void MainWindow::IndicateData(OporaDataStruct ops)
     LoadGPIO(0,0);
     LoadCLK();
     UARTIndex=0;
+    ui->comboBox_19->setCurrentIndex(UARTIndex);
     LoadUART(UARTIndex);
     SSPIndex=0;
+    ui->comboBox_39->setCurrentIndex(SSPIndex);
     LoadSSP(SSPIndex);
     TIMERIndex=0;
     TIMERChannelIndex=0;
+    ui->comboBox_16->setCurrentIndex(TIMERIndex);
+    ui->comboBox_24->setCurrentIndex(TIMERChannelIndex);
 }
 
 void MainWindow::on_FileOpen_toggled(bool arg1)
