@@ -25,7 +25,6 @@ void MainWindow::SaveCLK()
     if (ui->checkBox_10->isChecked()) this->SetingOPoraStruct.OPORA_CLOCK.CLK_ST.PLL_USB_RDY_READ_ENABLE = On;
                                  else this->SetingOPoraStruct.OPORA_CLOCK.CLK_ST.PLL_USB_RDY_READ_ENABLE = Off;
 
-
     if (ui->checkBox_27->isChecked())
     {
         this->SetingOPoraStruct.OPORA_CLOCK.PLL_CNTRL.PLL_CPU_ON = On;

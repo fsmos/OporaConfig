@@ -17,7 +17,8 @@ SOURCES += main.cpp\
     struct_clk.cpp \
     struct_uart.cpp \
     struct_ssp.cpp \
-    struct_gpio.cpp
+    struct_gpio.cpp \
+    struct_pvds.cpp
 
 HEADERS  += mainwindow.h \
     struct_code.h \
@@ -25,7 +26,8 @@ HEADERS  += mainwindow.h \
     struct_timer.h \
     struct_ssp.h \
     struct_uart.h \
-    struct_gpio.h
+    struct_gpio.h \
+    struct_pvdcs.h
 
 FORMS    += mainwindow.ui
 

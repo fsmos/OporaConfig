@@ -66,6 +66,7 @@ OporaDataStruct MainWindow::GenerateStruct()
     SaveCLK();
     SaveUART(UARTIndex);
     SaveSSP(SSPIndex);
+    SavePVDCS();
     return SetingOPoraStruct;
 }
 

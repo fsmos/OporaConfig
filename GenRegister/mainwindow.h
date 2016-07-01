@@ -53,6 +53,9 @@ private slots:
     void LoadSSP(int SSP);
     void SaveSSP(int SSP);
 
+//    void LoadPVDCS();
+    void SavePVDCS();
+
     void on_comboBox_19_currentIndexChanged(int index);
 
     void on_comboBox_39_currentIndexChanged(int index);
