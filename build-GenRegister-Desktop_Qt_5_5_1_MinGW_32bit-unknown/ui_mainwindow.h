@@ -637,7 +637,6 @@ public:
     QGroupBox *groupBox_61;
     QCheckBox *checkBox_213;
     QCheckBox *checkBox_215;
-    QLabel *label_62;
     QComboBox *comboBox_40;
     QLabel *label_63;
     QLabel *label_64;
@@ -2517,9 +2516,6 @@ public:
         checkBox_215 = new QCheckBox(groupBox_61);
         checkBox_215->setObjectName(QStringLiteral("checkBox_215"));
         checkBox_215->setGeometry(QRect(10, 40, 281, 18));
-        label_62 = new QLabel(tab_31);
-        label_62->setObjectName(QStringLiteral("label_62"));
-        label_62->setGeometry(QRect(20, 150, 391, 16));
         comboBox_40 = new QComboBox(tab_31);
         comboBox_40->setObjectName(QStringLiteral("comboBox_40"));
         comboBox_40->setGeometry(QRect(20, 200, 61, 22));
@@ -3538,10 +3534,9 @@ public:
         groupBox_60->setTitle(QApplication::translate("MainWindow", "\320\224\320\260\321\202\321\207\320\270\320\272 PVD", 0));
         checkBox_212->setText(QApplication::translate("MainWindow", "\320\262\320\272\320\273\321\216\321\207\320\270\321\202\321\214 \320\270\320\275\320\262\320\265\321\200\321\201\320\270\321\216 \320\262\321\213\321\205\320\276\320\264\320\260 ", 0));
         checkBox_214->setText(QApplication::translate("MainWindow", "\320\240\320\260\320\267\321\200\320\265\321\210\320\270\321\202\321\214 \320\277\321\200\320\265\321\200\321\213\320\262\320\260\320\275\320\270\320\265 \320\264\320\260\321\202\321\207\320\270\320\272\320\260 ", 0));
-        groupBox_61->setTitle(QApplication::translate("MainWindow", "\320\224\320\260\321\202\321\207\320\270\320\272 PVD", 0));
+        groupBox_61->setTitle(QApplication::translate("MainWindow", "\320\224\320\260\321\202\321\207\320\270\320\272 PVBD", 0));
         checkBox_213->setText(QApplication::translate("MainWindow", "\320\262\320\272\320\273\321\216\321\207\320\270\321\202\321\214 \320\270\320\275\320\262\320\265\321\200\321\201\320\270\321\216 \320\262\321\213\321\205\320\276\320\264\320\260 ", 0));
         checkBox_215->setText(QApplication::translate("MainWindow", "\320\240\320\260\320\267\321\200\320\265\321\210\320\270\321\202\321\214 \320\277\321\200\320\265\321\200\321\213\320\262\320\260\320\275\320\270\320\265 \320\264\320\260\321\202\321\207\320\270\320\272\320\260 ", 0));
-        label_62->setText(QApplication::translate("MainWindow", "\320\240\320\265\320\267\321\203\320\273\321\214\321\202\320\260\321\202 \321\201\321\200\320\260\320\262\320\275\320\265\320\275\320\270\321\217 \320\275\320\260\320\277\321\200\321\217\320\266\320\265\320\275\320\270\321\217 \320\261\320\260\321\202\320\260\321\200\320\265\320\271\320\275\320\276\320\263\320\276 \320\277\320\270\321\202\320\260\320\275\320\270\321\217", 0));
         comboBox_40->clear();
         comboBox_40->insertItems(0, QStringList()
          << QApplication::translate("MainWindow", "2 \320\222", 0)

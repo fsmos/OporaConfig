@@ -75,6 +75,7 @@ void MainWindow::IndicateData(OporaDataStruct ops)
 //ui->lineEdit->setText(QString("%1").arg(ops.Er1.el1.ExampleParamet));
     LoadGPIO(0,0);
     LoadCLK();
+    LoadPVDCS();
     UARTIndex=0;
     ui->comboBox_19->setCurrentIndex(UARTIndex);
     LoadUART(UARTIndex);

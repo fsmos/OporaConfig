@@ -8768,7 +8768,7 @@ cчетчик вниз при DIR=1
        </rect>
       </property>
       <property name="title">
-       <string>Датчик PVD</string>
+       <string>Датчик PVBD</string>
       </property>
       <widget class="QCheckBox" name="checkBox_213">
        <property name="geometry">
@@ -8796,19 +8796,6 @@ cчетчик вниз при DIR=1
         <string>Разрешить прерывание датчика </string>
        </property>
       </widget>
-     </widget>
-     <widget class="QLabel" name="label_62">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>150</y>
-        <width>391</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Результат сравнения напряжения батарейного питания</string>
-      </property>
      </widget>
      <widget class="QComboBox" name="comboBox_40">
       <property name="geometry">

@@ -22,6 +22,7 @@ struct PVDCS_GLOBAL
     enum Switches INV;
     enum Switches INVB;
     enum Switches IEPVD;
+    enum Switches IEPVBD;
     enum result PVD;
     enum result PVBD;
     unsigned int PLS;

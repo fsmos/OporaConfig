@@ -19,8 +19,8 @@
 
 QT_BEGIN_MOC_NAMESPACE
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[36];
-    char stringdata0[543];
+    QByteArrayData data[37];
+    char stringdata0[553];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -59,12 +59,13 @@ QT_MOC_LITERAL(26, 358, 8), // "LoadUART"
 QT_MOC_LITERAL(27, 367, 7), // "LoadSSP"
 QT_MOC_LITERAL(28, 375, 3), // "SSP"
 QT_MOC_LITERAL(29, 379, 7), // "SaveSSP"
-QT_MOC_LITERAL(30, 387, 9), // "SavePVDCS"
-QT_MOC_LITERAL(31, 397, 34), // "on_comboBox_19_currentIndexCh..."
-QT_MOC_LITERAL(32, 432, 5), // "index"
-QT_MOC_LITERAL(33, 438, 34), // "on_comboBox_39_currentIndexCh..."
-QT_MOC_LITERAL(34, 473, 34), // "on_comboBox_16_currentIndexCh..."
-QT_MOC_LITERAL(35, 508, 34) // "on_comboBox_24_currentIndexCh..."
+QT_MOC_LITERAL(30, 387, 9), // "LoadPVDCS"
+QT_MOC_LITERAL(31, 397, 9), // "SavePVDCS"
+QT_MOC_LITERAL(32, 407, 34), // "on_comboBox_19_currentIndexCh..."
+QT_MOC_LITERAL(33, 442, 5), // "index"
+QT_MOC_LITERAL(34, 448, 34), // "on_comboBox_39_currentIndexCh..."
+QT_MOC_LITERAL(35, 483, 34), // "on_comboBox_16_currentIndexCh..."
+QT_MOC_LITERAL(36, 518, 34) // "on_comboBox_24_currentIndexCh..."
 
     },
     "MainWindow\0on_FileOpen_toggled\0\0arg1\0"
@@ -77,7 +78,7 @@ QT_MOC_LITERAL(35, 508, 34) // "on_comboBox_24_currentIndexCh..."
     "currentRow\0on_listWidget_2_currentRowChanged\0"
     "on_GPIOPinON_clicked\0on_action_triggered\0"
     "SaveCLK\0LoadCLK\0SaveUART\0uart\0LoadUART\0"
-    "LoadSSP\0SSP\0SaveSSP\0SavePVDCS\0"
+    "LoadSSP\0SSP\0SaveSSP\0LoadPVDCS\0SavePVDCS\0"
     "on_comboBox_19_currentIndexChanged\0"
     "index\0on_comboBox_39_currentIndexChanged\0"
     "on_comboBox_16_currentIndexChanged\0"
@@ -91,7 +92,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-      25,   14, // methods
+      26,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -99,31 +100,32 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    1,  139,    2, 0x08 /* Private */,
-       4,    1,  142,    2, 0x08 /* Private */,
-       7,    0,  145,    2, 0x08 /* Private */,
-       8,    2,  146,    2, 0x08 /* Private */,
-      11,    0,  151,    2, 0x08 /* Private */,
-      12,    0,  152,    2, 0x08 /* Private */,
-      13,    2,  153,    2, 0x08 /* Private */,
-      14,    2,  158,    2, 0x08 /* Private */,
-      15,    0,  163,    2, 0x08 /* Private */,
-      16,    0,  164,    2, 0x08 /* Private */,
-      17,    1,  165,    2, 0x08 /* Private */,
-      19,    1,  168,    2, 0x08 /* Private */,
-      20,    0,  171,    2, 0x08 /* Private */,
-      21,    0,  172,    2, 0x08 /* Private */,
-      22,    0,  173,    2, 0x08 /* Private */,
-      23,    0,  174,    2, 0x08 /* Private */,
-      24,    1,  175,    2, 0x08 /* Private */,
-      26,    1,  178,    2, 0x08 /* Private */,
-      27,    1,  181,    2, 0x08 /* Private */,
-      29,    1,  184,    2, 0x08 /* Private */,
-      30,    0,  187,    2, 0x08 /* Private */,
-      31,    1,  188,    2, 0x08 /* Private */,
-      33,    1,  191,    2, 0x08 /* Private */,
-      34,    1,  194,    2, 0x08 /* Private */,
-      35,    1,  197,    2, 0x08 /* Private */,
+       1,    1,  144,    2, 0x08 /* Private */,
+       4,    1,  147,    2, 0x08 /* Private */,
+       7,    0,  150,    2, 0x08 /* Private */,
+       8,    2,  151,    2, 0x08 /* Private */,
+      11,    0,  156,    2, 0x08 /* Private */,
+      12,    0,  157,    2, 0x08 /* Private */,
+      13,    2,  158,    2, 0x08 /* Private */,
+      14,    2,  163,    2, 0x08 /* Private */,
+      15,    0,  168,    2, 0x08 /* Private */,
+      16,    0,  169,    2, 0x08 /* Private */,
+      17,    1,  170,    2, 0x08 /* Private */,
+      19,    1,  173,    2, 0x08 /* Private */,
+      20,    0,  176,    2, 0x08 /* Private */,
+      21,    0,  177,    2, 0x08 /* Private */,
+      22,    0,  178,    2, 0x08 /* Private */,
+      23,    0,  179,    2, 0x08 /* Private */,
+      24,    1,  180,    2, 0x08 /* Private */,
+      26,    1,  183,    2, 0x08 /* Private */,
+      27,    1,  186,    2, 0x08 /* Private */,
+      29,    1,  189,    2, 0x08 /* Private */,
+      30,    0,  192,    2, 0x08 /* Private */,
+      31,    0,  193,    2, 0x08 /* Private */,
+      32,    1,  194,    2, 0x08 /* Private */,
+      34,    1,  197,    2, 0x08 /* Private */,
+      35,    1,  200,    2, 0x08 /* Private */,
+      36,    1,  203,    2, 0x08 /* Private */,
 
  // slots: parameters
     QMetaType::Void, QMetaType::Bool,    3,
@@ -147,10 +149,11 @@ static const uint qt_meta_data_MainWindow[] = {
     QMetaType::Void, QMetaType::Int,   28,
     QMetaType::Void, QMetaType::Int,   28,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::Int,   32,
-    QMetaType::Void, QMetaType::Int,   32,
-    QMetaType::Void, QMetaType::Int,   32,
-    QMetaType::Void, QMetaType::Int,   32,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   33,
+    QMetaType::Void, QMetaType::Int,   33,
+    QMetaType::Void, QMetaType::Int,   33,
+    QMetaType::Void, QMetaType::Int,   33,
 
        0        // eod
 };
@@ -182,11 +185,12 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         case 17: _t->LoadUART((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 18: _t->LoadSSP((*reinterpret_cast< int(*)>(_a[1]))); break;
         case 19: _t->SaveSSP((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 20: _t->SavePVDCS(); break;
-        case 21: _t->on_comboBox_19_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 22: _t->on_comboBox_39_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 23: _t->on_comboBox_16_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
-        case 24: _t->on_comboBox_24_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 20: _t->LoadPVDCS(); break;
+        case 21: _t->SavePVDCS(); break;
+        case 22: _t->on_comboBox_19_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 23: _t->on_comboBox_39_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 24: _t->on_comboBox_16_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
+        case 25: _t->on_comboBox_24_currentIndexChanged((*reinterpret_cast< int(*)>(_a[1]))); break;
         default: ;
         }
     }
@@ -217,13 +221,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 25)
+        if (_id < 26)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 25;
+        _id -= 26;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 25)
+        if (_id < 26)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 25;
+        _id -= 26;
     }
     return _id;
 }
